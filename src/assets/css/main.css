@@ -1,0 +1,70 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--vt-c-bright-green);
+  transition: 0.4s;
+  padding: 3px;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--vt-c-blue);
+  color: var(--vt-c-white);
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.beer-icon {
+  width: 21px;
+
+  &.spinning {
+    margin: 10px auto;
+    display: flex;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* For Screen Readers*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
