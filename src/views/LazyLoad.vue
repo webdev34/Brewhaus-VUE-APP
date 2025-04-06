@@ -10,7 +10,6 @@
       :search-query="searchTerm"
       :from="'LazyLoad'"
     />
-
     <button class="load-more-btn" v-if="!loading && hasMore" @click="loadMore">Load More</button>
     <img v-if="loading" src="@/assets/images/beer-mug.svg" alt="Beer mug icon" class="beer-icon spinning" role="status" aria-label="Loading" />
     <p class="no-results" v-if="!breweries.length && !loading">No Results</p>
