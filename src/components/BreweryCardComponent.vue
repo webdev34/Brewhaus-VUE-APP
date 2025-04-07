@@ -8,7 +8,7 @@
       :to="{
         name: 'BreweryDetail',
         params: { id: brewery.id },
-        query: { search: searchQuery, from: 'LazyLoad' }
+        query: { search: searchQuery, from }
       }"
       class="details-link"
       :aria-label="`View details for ${brewery.name}`"
@@ -32,6 +32,10 @@ export default defineComponent({
     searchQuery: {
       type: String,
       default: ''
+    },
+    from: {
+      type: String,
+      required: true
     }
   }
 });
